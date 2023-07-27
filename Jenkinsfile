@@ -4,12 +4,12 @@ pipeline{
     maven 'maven'
     }
     stages{
-       stage('build maven'){
-          steps{
-              checkout scmGit(branches: [[name: '*/lms-jenkins-pipeline']], extensions: [], userRemoteConfigs: [[credentialsId: 'git_credential', url: 'https://github.com/isarthak/lms-helmchart.git']])
-               sh 'mvn clean install'
-               }
-            }
+//        stage('build maven'){
+//           steps{
+//               checkout scmGit(branches: [[name: '*/lms-jenkins-pipeline']], extensions: [], userRemoteConfigs: [[credentialsId: 'git_credential', url: 'https://github.com/isarthak/lms-helmchart.git']])
+//                sh 'mvn clean install'
+//                }
+//             }
        stage('Build Docker Image') {
           steps {
             script {
